@@ -6,7 +6,7 @@ InputCharacter  -> any 7-bit ASCII character.
 
 LineTerminator -> LF | CR | CR LF
 
-	 LF is the ASCII character also known as “newline”. The Java character literal is ‘\n’.
+	LF is the ASCII character also known as “newline”. The Java character literal is ‘\n’.
 	CR is the ASII character also known as “return”, The Java character literal is ‘\r’.
 	CR immediately followed by LF counts as one line terminator, not two. 
 
@@ -59,9 +59,11 @@ Operators ->  < | > | <= | >= | - | + | * | / | % | ! | ** | == | =
 Keywords -> print | int | float | boolean | char | string | sleep | if
 
 
-•	If an illegal character is encountered, your scanner should throw a LexicalException. The message should contain useful information about the error. The contents of the message will not be graded, but you will appreciate it later if it is descriptive.
-•	If a numeric literal is provided that is out of the range of the Java equivalent of that type, then your scanner should throw a Lexical exception. The contents of the error message will not be graded, but you will appreciate it later if it is descriptive. 
-•	Use the provided PLPScanner.java and PLPScannerTest.java as starting points. The scanner will be part of all the subsequent assignments. Errors may cause failures in subsequent assignments. A careful job now, including a complete test suite developed now will help you later.
+•If an illegal character is encountered, your scanner should throw a LexicalException. The message should contain useful information about the error. The contents of the message will not be graded, but you will appreciate it later if it is descriptive.
+
+•If a numeric literal is provided that is out of the range of the Java equivalent of that type, then your scanner should throw a Lexical exception. The contents of the error message will not be graded, but you will appreciate it later if it is descriptive. 
+
+•Use the provided PLPScanner.java and PLPScannerTest.java as starting points. The scanner will be part of all the subsequent assignments. Errors may cause failures in subsequent assignments. A careful job now, including a complete test suite developed now will help you later.
 
 ------------
 ### Valid [Parse-able] Cases
