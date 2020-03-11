@@ -23,22 +23,39 @@ Comment ->  %{    (   (% NOT({) ) | NOT(%) )* %+}
 	Comments will be identified and discarded [you do not need to keep them as a token].
 
 Token  -> Identifier | Keyword | Literal | Separator | Operator
+
 Identifier  -> IdentifierChar but not a keyword or a Boolean literal
+
 IdentifierChar  -> IdentifierStart IdentifierPart*
+
 IdentifierStart  -> UnderScoreStart IdentifierStart |A..Z IdentifierPart | a..z IdentifierPart
+
 UnderScoreStart   -> _ UnderScoreStart | _
+
 IdentifierPart -> A..Z IdentifierPart | a..z IdentifierPart | Digit IdentifierPart | _ IdentifierPart | 
+
 Literal  -> IntegerLiteral | FloatingPointLiteral | BooleanLiteral | StringLiteral | CharLiteral
+
 IntegerLiteral -> 0 | NonZeroDigit Digit*
+
 FloatingPointLiteral ->  IntegerLiteral . Digit Digit*
+
 StringLiteral -> " ASCII* "
+
 CharLiteral -> ' ASCII '
+
 ASCII ->  ASCII_CHAR | 
+
 NoneZeroDigit ->  1 .. 9
+
 Digit -> NonZeroDigit | 0
+
 BooleanLiteral -> true | false
+
 Separators -> ( | ) | [ | ] | ; | , | { | }
+
 Operators ->  < | > | <= | >= | - | + | * | / | % | ! | ** | == | =
+
 Keywords -> print | int | float | boolean | char | string | sleep | if
 
 
